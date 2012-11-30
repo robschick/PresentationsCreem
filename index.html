@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Version Control With RStudio</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Version Control With RStudio">
+  <meta name="author" content="Rob Schick">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+    <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    <!-- END LOGO SLIDE -->
+    
+
+    <!-- TITLE SLIDE -->
+    <!-- Should I move this to a Local Layout File? -->
+    <slide class="title-slide segue nobackground">
+      <hgroup class="auto-fadein">
+        <h1>Version Control With RStudio</h1>
+        <h2>It's easier than you might think</h2>
+        <p>Rob Schick<br/>Professional Nerd</p>
+      </hgroup>
+          </slide>
+
+    <!-- SLIDES -->
+      <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Version Control with RStudio
+
+<ul>
+<li>Setting up a new repository/project</li>
+<li>Setting up with an existing repository</li>
+</ul></li>
+<li>Working with RStudio to manage projects</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Version Control with RStudio</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>RStudio has built in capabilities for SVN and Git</li>
+<li>Instead of coding in RStudio, and going to Git to commit, you can do it all in one place</li>
+<li>Easy facilities to bring in existing repositories (this is nice if you are already using Git)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Process Flow</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Install your VCS of choice (well, Git or SVN)</li>
+<li>Fire up RStudio
+** Start a new project using an existing directory under version control or...
+** Start a new project using an existing repository as the basis
+** Pull down an existing repository from, say, <a href="https://github.com/square/crossfilter">GitHub</a> (not sure how different this is from forking...maybe this is forking? I actually think it&#39;s cloning....)</li>
+<li>n.b you can&#39;t <em>see</em> git from RStudio unless you have a project...</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>New Project</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Project/Create New</li>
+<li>Save or Don&#39;t save</li>
+<li>Name your project &amp; select its location</li>
+<li>You can choose to create a git repository for this new project</li>
+<li>Voila - you are working in a new project (if you have Git installed, you can use Git right away)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Quick Demo</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Start a project (have to have R installed, and Git installed)</li>
+<li>Write some code
+
+<ul>
+<li>Commit it (you may get a Commit error the first time) </li>
+<li>If so, you may need <a href="https://help.github.com/articles/set-up-git#platform-windows">gitbash</a></li>
+</ul></li>
+<li>Change the code</li>
+<li>Commit it again</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Project from Existing Directory</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Make a project from an existing directory</li>
+<li>Easy Peasy, just browse to the directory</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>What Happens When You Work With A Project?</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>From <a href="http://www.rstudio.com/ide/docs/using/projects">RStudio Help</a>:
+
+<ul>
+<li>A new R session (process) is started</li>
+<li>The .Rprofile file in the project&#39;s main directory (if any) is sourced by R</li>
+<li>The .RData file in the project&#39;s main directory is loaded (if project options indicate that it should be loaded).</li>
+<li>The .Rhistory file in the project&#39;s main directory is loaded into the RStudio History pane (and used for Console Up/Down arrow command history).</li>
+<li>The current working directory is set to the project directory.</li>
+<li>Previously edited source documents are restored into editor tabs</li>
+<li>Other RStudio settings (e.g. active tabs, splitter positions, etc.) are restored to where they were the last time the project was closed.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>What Happens When You Quit?</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>.RData and/or .Rhistory are written to the project directory (if current options indicate they should be)</li>
+<li>The list of open source documents is saved (so it can be restored next time the project is opened)</li>
+<li>Other RStudio settings (as described above) are saved.</li>
+<li>The R session is terminated.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>How Did I Make this Slide Deck?</h2>
+  </hgroup>
+  <article>
+    <ul class = "build">
+<li><a href="http://slidify.org/index.html">slidify</a></li>
+<li>Nicely integrated with R Studio</li>
+<li>Uses R Markdown</li>
+<li>Lets you do cool stuff like:</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Write some cool math</h2>
+  </hgroup>
+  <article>
+    <p>\[  \prod_{j\ge0}\left( \sum_{k\ge0} a_{jk}z^k \right) = \sum_{n\ge0} z^n \left(\sum_{k_0, k_1\ldots\ge0 \atop k_0+k_1+\cdots=0} a_{0k_0} a_{1k_1}\ldots \right) \]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Display some R Code</h2>
+  </hgroup>
+  <article>
+    <pre><code>library(ggplot2)
+library(plyr)
+movies$decade &lt;- round_any(movies$year, 10, floor)
+qplot(rating, ..density.., data = subset(movies, decade &gt; 1960), 
+geom = &#39;histogram&#39;, binwidth = 0.5) + 
+facet_wrap(~ decade, ncol = 6)
+
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Source said R Code</h2>
+  </hgroup>
+  <article>
+    <p><img src="figure/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Grab CDN jQuery, fall back to local if offline -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+</html>
